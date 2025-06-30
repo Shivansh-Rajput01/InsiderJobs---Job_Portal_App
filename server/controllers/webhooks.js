@@ -38,7 +38,7 @@ import User from '../models/User.js'
             }
                 
             case 'user.deleted':{
-                await User.findByIdAndDelete(User.id)
+                await User.findByIdAndDelete(data.id)
                 res.json({})
                 break;
             }
