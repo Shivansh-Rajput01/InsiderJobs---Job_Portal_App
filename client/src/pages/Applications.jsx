@@ -73,7 +73,7 @@ const Applications = () => {
           </>
         :
           <div className='flex gap-2'>
-            <a target='_blank' className='bg-blue-200 text-blue-600 px-4 py-2 rounded-lg cursor-pointer' href={userData.resume}>Resume</a>
+            <a target='_blank' className='bg-blue-200 text-blue-600 px-4 py-2 rounded-lg cursor-pointer' href={userData?.resume || '#'}>Resume</a>
             <button onClick={() => setIsEdit(true)} className='bg-gray-200 text-gray-900 border border-gray-500 px-4 py-2 rounded-lg'>Edit</button>
           </div>
         }
@@ -90,7 +90,7 @@ const Applications = () => {
           </tr>
         </thead>
         <tbody>
-          {userApplications.map((job, index) => true ? (
+          {userApplications.map((job, index) => job?.jobId && job?.companyId ? (
             <tr key={index}>
               <td className='py-3 px-4 flex items-center gap-2 border-b'>
                 <img className='w-8 h-8' src={job.companyId.image} alt="" />
