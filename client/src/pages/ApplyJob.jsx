@@ -72,7 +72,7 @@ const ApplyJob = () => {
   }
 
   const checkedAlreadyApplied = () => {
-    const hasApplied = userApplications.some(item => item.jobId._id === jobData._id)
+    const hasApplied = userApplications.some(item => item?.jobId?._id === jobData._id)
 
     setIsAlreadyApplied(hasApplied)
 

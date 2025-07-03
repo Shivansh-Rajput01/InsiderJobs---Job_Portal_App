@@ -10,9 +10,15 @@ const Footer = () => {
         <img onClick={() => navigate("/")} className='cursor-pointer' width={160} src={assets.logo} alt="" />
         <p className='flex-1 pl-4 text-sm text-gray-500 max-sm:hidden'>Copyright @InsiderJobs.com.com | All right reserved.</p>
         <div className='flex gap-2.5'>
-            <img width={38} src={assets.facebook_icon} alt="" />
-            <img width={38} src={assets.instagram_icon} alt="" />
-            <img width={38} src={assets.twitter_icon} alt="" />
+          <a href="https://github.com/Shivansh-Rajput01">
+            <img width={38} src={assets.facebook_icon} alt="github-icon" />
+          </a>
+          <a href="https://www.instagram.com/_shhivanshh/">
+            <img width={38} src={assets.instagram_icon} alt="insta-icon" />
+          </a>
+          <a href="https://x.com/_shhivanshh">
+            <img width={38} src={assets.twitter_icon} alt="x-icon" />
+          </a>
         </div>
     </div>
   )
